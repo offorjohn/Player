@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plyr Demo</title>
+  <!-- Plyr CSS from CDN -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+</head>
+<body>
+  <video id="player" controls crossorigin playsinline>
+    <source src="https://filmszone.shop/play/xhqE7NYYXP1HJ_TnHQ0MXJYC7SS-_yOJzzKS1bnX8tE" type="video/mp4" />
+    <track kind="captions" label="Arabic" srclang="ar" src="captions-en.vtt" default />
+  </video>
+
+  <!-- Plyr JS from CDN -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const player = new Plyr('#player', {
+        captions: { active: true, language: 'ar', update: true }
+      });
+    });
+  </script>
+</body>
+</html>
